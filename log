@@ -49,3 +49,27 @@ exercises.c:48:16: error: ‘k’ undeclared (first use in this function)
       |                ^
 cc1: all warnings being treated as errors
 d63b66f
+Fri Mar 20 06:18:21 PM UTC 2026: 
+ exercises.c | 9 +++++++++
+ 1 file changed, 9 insertions(+)
+Compilation failed
+In file included from test.c:5:
+exercises.c: In function ‘crea_lista’:
+exercises.c:47:8: error: expected expression before ‘int’
+   47 |        int* data = (int*) malloc(sizeof(int));
+      |        ^~~
+exercises.c:46:4: error: this ‘for’ clause does not guard... [-Werror=misleading-indentation]
+   46 |    for (int k = 1; k <= 10; k++)
+      |    ^~~
+exercises.c:48:8: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘for’
+   48 |        *data = k;
+      |        ^
+exercises.c:48:9: error: ‘data’ undeclared (first use in this function)
+   48 |        *data = k;
+      |         ^~~~
+exercises.c:48:9: note: each undeclared identifier is reported only once for each function it appears in
+exercises.c:48:16: error: ‘k’ undeclared (first use in this function)
+   48 |        *data = k;
+      |                ^
+cc1: all warnings being treated as errors
+34db244
