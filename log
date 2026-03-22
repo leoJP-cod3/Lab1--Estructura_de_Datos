@@ -108,3 +108,9 @@ exercises.c:117:11: error: unused variable ‘pila’ [-Werror=unused-variable]
       |           ^~~~
 cc1: all warnings being treated as errors
 8e3d42b
+Sun Mar 22 08:08:19 PM UTC 2026: 
+ exercises.c | 1 -
+ 1 file changed, 1 deletion(-)
+ tests:  2|3
+total_score: 30/70
+80ba27d
