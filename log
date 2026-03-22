@@ -79,3 +79,21 @@ Fri Mar 20 06:19:01 PM UTC 2026:
  tests:  1|4
 total_score: 10/70
 c44ab78
+Sun Mar 22 08:05:55 PM UTC 2026: 
+ exercises.c | 27 +++++++++++++++++++++++++--
+ 1 file changed, 25 insertions(+), 2 deletions(-)
+Compilation failed
+In file included from test.c:5:
+exercises.c: In function ‘sumaLista’:
+exercises.c:59:4: error: this ‘while’ clause does not guard... [-Werror=misleading-indentation]
+   59 |    while (dato != NULL)
+      |    ^~~~~
+exercises.c:61:8: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘while’
+   61 |        dato = next(L);
+      |        ^~~~
+exercises.c: In function ‘parentesisBalanceados’:
+exercises.c:121:15: error: suggest explicit braces to avoid ambiguous ‘else’ [-Werror=dangling-else]
+  121 |            if (cadena[i] == ')')
+      |               ^
+cc1: all warnings being treated as errors
+5f085b3

@@ -43,6 +43,8 @@ Al finalizar retorna la lista creada.
 
 List* crea_lista() {
    List* L = create_list();
+   for (int i = 1; i <= 10; i++)
+       pushBack(L, &i);
    return L;
 }
 
@@ -52,7 +54,11 @@ Crea una función que reciba una lista de enteros (int*) y
 retorne la suma de sus elementos.
 */
 int sumaLista(List *L) {
-   
+   int* dato = first(L);
+   int suma = 0;
+   while (dato != NULL)
+       suma += *dato;
+       dato = next(L);
    return 0;
 }
 
@@ -70,7 +76,13 @@ posiciona en el elemento anterior.
 */
 
 void eliminaElementos(List*L, int elem){
-
+   int* dato = first(L);
+   while (dato != NULL){
+       if (*dato == elem)
+           popCurrent(L);
+       dato = next(L);
+   }
+   
 }
 
 /*
@@ -86,10 +98,11 @@ void copia_pila(Stack* P1, Stack* P2) {
        push(aux, pop(P1));
    }
    while (top(aux) != NULL){
-      void* elem = pop(aux);
+       int* elem = pop(aux);
        push(P1, elem);
        push(P2, elem);
    }
+   free(aux);  
 }
 
 /*
@@ -100,6 +113,16 @@ paraéntesis balanceados. Retorna 1 si están balanceados,
 */
 
 int parentesisBalanceados(char *cadena) {
+   Stack* pila = create_stack();
+   for (int i = 0; cadena[i] != '\0'; i++)
+       if (cadena[i] == '(')
+           push(pila, &cadena[i]);
+       else
+           if (cadena[i] == ')')
+               if (top(pila) == NULL)
+                   return 0;
+               else
+                   pop(pila);
    return 0;
 }
 
