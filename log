@@ -97,3 +97,14 @@ exercises.c:121:15: error: suggest explicit braces to avoid ambiguous ‘else’
       |               ^
 cc1: all warnings being treated as errors
 5f085b3
+Sun Mar 22 08:07:59 PM UTC 2026: 
+ exercises.c | 12 ++----------
+ 1 file changed, 2 insertions(+), 10 deletions(-)
+Compilation failed
+In file included from test.c:5:
+exercises.c: In function ‘parentesisBalanceados’:
+exercises.c:117:11: error: unused variable ‘pila’ [-Werror=unused-variable]
+  117 |    Stack* pila = create_stack();
+      |           ^~~~
+cc1: all warnings being treated as errors
+8e3d42b

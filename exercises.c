@@ -56,9 +56,10 @@ retorne la suma de sus elementos.
 int sumaLista(List *L) {
    int* dato = first(L);
    int suma = 0;
-   while (dato != NULL)
+   while (dato != NULL){
        suma += *dato;
        dato = next(L);
+   }
    return 0;
 }
 
@@ -114,15 +115,6 @@ paraéntesis balanceados. Retorna 1 si están balanceados,
 
 int parentesisBalanceados(char *cadena) {
    Stack* pila = create_stack();
-   for (int i = 0; cadena[i] != '\0'; i++)
-       if (cadena[i] == '(')
-           push(pila, &cadena[i]);
-       else
-           if (cadena[i] == ')')
-               if (top(pila) == NULL)
-                   return 0;
-               else
-                   pop(pila);
    return 0;
 }
 
