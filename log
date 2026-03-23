@@ -169,3 +169,14 @@ Mon Mar 23 12:42:40 AM UTC 2026:
  tests:  7|1
 total_score: 60/70
 ca92d15
+Mon Mar 23 01:03:11 AM UTC 2026: 
+ exercises.c | 26 +++++++++++++++-----------
+ 1 file changed, 15 insertions(+), 11 deletions(-)
+Compilation failed
+In file included from test.c:5:
+exercises.c: In function ‘parentesisBalanceados’:
+exercises.c:124:16: error: suggest explicit braces to avoid ambiguous ‘else’ [-Werror=dangling-else]
+  124 |             if (cadena[i] == ')')
+      |                ^
+cc1: all warnings being treated as errors
+6d1e430
