@@ -137,3 +137,17 @@ exercises.c:124:16: error: suggest explicit braces to avoid ambiguous ‘else’
       |                ^
 cc1: all warnings being treated as errors
 9e998f4
+Mon Mar 23 12:37:48 AM UTC 2026: 
+ exercises.c | 23 ++++++++---------------
+ 1 file changed, 8 insertions(+), 15 deletions(-)
+Compilation failed
+In file included from test.c:5:
+exercises.c: In function ‘parentesisBalanceados’:
+exercises.c:120:14: error: expected identifier or ‘(’ before ‘=’ token
+  120 |     for (int = 0; cadena[i] != '\0'; i++){
+      |              ^
+exercises.c:120:26: error: ‘i’ undeclared (first use in this function)
+  120 |     for (int = 0; cadena[i] != '\0'; i++){
+      |                          ^
+exercises.c:120:26: note: each undeclared identifier is reported only once for each function it appears in
+0523116
